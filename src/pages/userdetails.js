@@ -33,19 +33,22 @@ export default function UserDetails(req) {
                   style={{ cursor: "pointer" }}
                   key={user.id}
                 >
-                  <h2>id: {user.id}</h2>
-                  <h3>login: {user.login}</h3>
+                  <h2> User Info: </h2>
+                  <p>Name: {user.name}</p>
+                  <p>Id: {user.id}</p>
+                  <p>Login: {user.login}</p>
+                  <p>Profile URL: {user.url}</p>
+                  <p>Created At: {user.created_at}</p>
                 </ListGroupItem>
               </ListGroup>
             </Link>
           </ul>
-          <Table>
+          <Table bordered>
             <thead>
               <tr>
                 <th>Id</th>
                 <th>Name</th>
-                <th>URL</th>
-                <th>Created at</th>
+                <th>Repository URL</th>
               </tr>
             </thead>
             <tbody>
@@ -54,8 +57,6 @@ export default function UserDetails(req) {
                   <td>{item.id}</td>
                   <td>{item.name}</td>
                   <td>{item.url}</td>
-                  <td>{item.created_at}</td>
-                  <td />
                 </tr>
               ))}
             </tbody>

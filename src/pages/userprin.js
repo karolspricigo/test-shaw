@@ -20,14 +20,13 @@ export default function UserListing() {
   return (
     <>
       <Container>
-        <h1 className="text-center py-5">Gitbub Users List</h1>
+        <h1 className="text-center py-5">Github Users List</h1>
         <div>
           <ul>
             {users.map((user) => (
               <Link to={{ pathname: `/${user.login}/details` }}>
                 <ListGroup type="inline">
                   <ListGroupItem
-                    className="single-user"
                     style={{ cursor: "pointer" }}
                     key={user.id}
                   >
